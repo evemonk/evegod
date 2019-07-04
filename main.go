@@ -18,7 +18,24 @@ type EveCharacter struct {
 	SecurityStatus float64 `json:"security_status"`
 }
 
+type Character struct {
+	AllianceID     int64   `json:"alliance_id"`
+	AncestryID     int64   `json:"ancestry_id"`
+	Birthday       string  `json:"birthday"`
+	BloodlineID    int64   `json:"bloodline_id"`
+	CorporationID  int64   `json:"corporation_id"`
+	Description    string  `json:"description"`
+	Gender         string  `json:"gender"`
+	Name           string  `json:"name"`
+	RaceID         int64   `json:"race_id"`
+	SecurityStatus float64 `json:"security_status"`
+}
+
 const character_url_pattern = "https://esi.evetech.net/v4/characters/%s/"
+
+const eve_characters_table = "eve_characters"
+
+const characters_table = "characters"
 
 func main() {
 	fmt.Println("EveGO Daemon")
